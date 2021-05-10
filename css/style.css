@@ -102,10 +102,10 @@
 }
 .sitenavigation li.nav-dropdown:hover > a {
   background-color: transparent !important;
-  color: #000;
+  color: #fff;
 }
 .sitenavigation li a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
   display: block;
   padding: 11px 14px;
@@ -122,7 +122,7 @@
 }
 .sitenavigation li a:hover {
   background-color: transparent !important;
-  color: #000;
+  color: #fff;
 }
 .sitenavigation li.clicked > ul {
   display: block;
@@ -400,7 +400,7 @@ navbar-nav li .dropdown-menu {
   padding: 0 8px 10px 8px;
   text-decoration: none;
   display: inline-block;
-  color: #fff;
+  color: #000;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -419,7 +419,7 @@ navbar-nav li .dropdown-menu {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #ffffff;
+  background-color: #000;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -440,7 +440,8 @@ navbar-nav li .dropdown-menu {
 }
 
 .nav-menu ul li {
-  background: #fff;
+  background: #000;
+  color: #fff;
 }
 
 .nav-menu ul li:first-child {
@@ -449,7 +450,7 @@ navbar-nav li .dropdown-menu {
 
 .nav-menu ul li a {
   padding: 10px;
-  color: #333;
+  color: #fff;
   transition: 0.3s;
   display: block;
   font-size: 13px;

@@ -339,6 +339,18 @@ h6 {
   min-width: 180px;
 }
 
+navbar-nav li .dropdown-menu {
+  border-radius: 0px;
+}
+
+.navbar-nav li .dropdown-menu li a {
+  color: #34bcaa;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.navbar-nav li .dropdown-menu li a:hover, .navbar-nav li .dropdown-menu li a:focus {
+  color: #debf12;
+}
 
 
 .sf-arrows .sf-with-ul {

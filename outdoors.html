@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
- 
-<head>
+<html lang="en"><head>
   <meta charset="utf-8">
   <title>Wild Boys</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
 
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -19,9 +15,9 @@
   
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body><button type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>
 
-  <div id="loading">
+  <div id="loading" style="display: none;">
     <div class="lds-grid">
       <div></div>
       <div></div>
@@ -35,25 +31,25 @@
     </div>
   </div>
 
- <header id="header">
+ <header id="header" class="header-fixed">
     <div class="container">
       <div id="logo" class="pull-left">
         <h1><a href="#hero">Wild Boys</a></h1>
       </div>
       <nav id="nav-menu-container">
-        <ul class="nav-menu">
+        <ul class="nav-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
           <li class="menu-active"><a href="#hero">Home</a></li>
           <li><a href="#adventures">Adventures</a></li>
           <li class="dropdown">
-              <a href="#" data-toggle="dropdown">Outdoors</a>
-              <ul class="dropdown-menu" role="menu">
+              <a href="#" data-toggle="dropdown" class="sf-with-ul">Outdoors</a>
+              <ul class="dropdown-menu" role="menu" style="display: none;">
                 <li><a href="outdoors.html">Fishing</a></li>                
              <!--   <li><a href="https://smartrade.com/">SmartTrade</a></li>    
 		<li><a href="https://novaexchange.com/market/BTC_HTH">Nova Exchange</a></li>
 		<li><a href="https://www.probitex.com/trade/index/market/hth_btc">ProBitEx</a></li>  -->
               </ul>
             </li> 		      
-           </li>      
+                 
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -68,31 +64,8 @@
     </div>
   </section>
   <main id="main">
-    <section id="outdoors">
-      <div class="container wow fadeInUp">
-        <div class="section-header">
-          <h3 class="section-title">Adventures</h3>
-          <p class="section-description">Adventures Coming Soon!!!</p>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 portfolio-item">
-            <a href="">
-              <img src="images/" alt="">
-              <div class="details">
-                <h4>List of Outdoors</h4>
-                <span>Coming Soon!!!</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      </div>
-    </section>
- <br>
- <br>
- <main id="main">
     <section id="fishing">
-      <div class="container wow fadeInUp">
+      <div class="container wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
         <div class="section-header">
           <h3 class="section-title">Fishing</h3>
           <p class="section-description">Fishing Coming Soon!!!</p>
@@ -109,12 +82,35 @@
           </div>
         </div>
       </div>
+      
+    </section>
+ <br>
+ <br>
+ <main id="main">
+    <section id="hiking">
+      <div class="container wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+        <div class="section-header">
+          <h3 class="section-title">Hiking</h3>
+          <p class="section-description">Hiking Coming Soon!!!</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 portfolio-item">
+            <a href="">
+              <img src="images/" alt="">
+              <div class="details">
+                <h4>List of Hiking</h4>
+                <span>Coming Soon!!!</span>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
+      
     </section>
 
   </main>
   
-  </section>
+  
   <footer id="footer">
     <div class="footer-top">
       <div class="container">
@@ -124,7 +120,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Made by <strong>MichaelHDesigns</strong>
+        © Made by <strong>MichaelHDesigns</strong>
       </div>
     </div>
   </footer>
@@ -140,6 +136,24 @@
   <script src="index.js" type="text/javascript"></script>
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="js/main.js"></script>
-</body>
 
-</html>
+
+
+</main><nav id="mobile-nav">
+        <ul class="" style="touch-action: pan-y;" id="">
+          <li class="menu-active"><a href="#hero">Home</a></li>
+          <li><a href="#adventures">Adventures</a></li>
+          <li class="dropdown">
+              <a href="#" data-toggle="dropdown" class="sf-with-ul">Outdoors</a>
+              <ul class="dropdown-menu" role="menu" style="display: none;">
+                <li><a href="outdoors.html">Fishing</a></li>                
+             <!--   <li><a href="https://smartrade.com/">SmartTrade</a></li>    
+		<li><a href="https://novaexchange.com/market/BTC_HTH">Nova Exchange</a></li>
+		<li><a href="https://www.probitex.com/trade/index/market/hth_btc">ProBitEx</a></li>  -->
+              </ul>
+            </li> 		      
+                 
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav><div id="mobile-body-overly"></div></body></html>

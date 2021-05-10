@@ -8,7 +8,7 @@
   
   .navbar {
     width: 100%;
-    background-color: transparent;
+    background-color: #f9f9f9;
     border: thin solid #ededed;
     height: 44px;
   }
@@ -39,7 +39,7 @@
   position: absolute;
   height: 5px;
   width: 100%;
-  background: transparent;
+  background: #333;
   border-radius: 9px;
   opacity: 1;
   left: 7px;
@@ -90,7 +90,6 @@
   margin: 0;
   padding: 0;
   float: right;
-  font-weight: bold;
 }
 .sitenavigation li {
   list-style-type: none;
@@ -101,11 +100,11 @@
   line-height: 20px;
 }
 .sitenavigation li.nav-dropdown:hover > a {
-  background-color: transparent !important;
-  color: #fff;
+  background-color: #CCC !important;
+  color: #000;
 }
 .sitenavigation li a {
-  color: #fff;
+  color: #758283;
   text-decoration: none;
   display: block;
   padding: 11px 14px;
@@ -113,16 +112,16 @@
   -webkit-tap-highlight-color: transparent;
 }
 .sitenavigation li a.nav-path-selected, .sitenavigation li a.linkclicked {
-  color: #000;
-  background-color: transparent;
+  color: white;
+  background-color: #ECECEC;
 }
 .sitenavigation li a.nav-selected {
-  background-color: transparent;
+  background-color: #777;
   color: #000;
 }
 .sitenavigation li a:hover {
-  background-color: transparent !important;
-  color: #fff;
+  background-color: #CCC !important;
+  color: #000;
 }
 .sitenavigation li.clicked > ul {
   display: block;
@@ -136,7 +135,7 @@
   margin: 0;
 }
 .sitenavigation li ul a {
-  background-color: transparent;
+  background-color: #dfdfdf;
   font-size: 0.8125em;
 }
 .sitenavigation li ul li {
@@ -149,10 +148,10 @@
   margin-top: -40px;
 }
 .sitenavigation li ul ul a {
-  background-color: transparent;
+  background-color: lightgray;
 }
 .sitenavigation .nav-dropdown:hover > a, .sitenavigation .nav-dropdown.clicked > a {
-  background-color: transparent;
+  background-color: #ECECEC;
 }
 
 .no-js .sitenavigation li:hover > ul {
@@ -166,7 +165,7 @@
 @media (max-width: 991px) {
   .navbar {
     width: 100%;
-    background-color: transparent;
+    background-color: #f9f9f9;
     border: thin solid #ededed;
     height: 44px;
     position: absolute;
@@ -209,7 +208,7 @@
     display: block;
     position: absolute;
     margin: 0;
-    background-color: transparent;
+    background-color: #FFF;
     right: 0;
     left: 0;
     z-index: 100;
@@ -218,7 +217,7 @@
   .navbar .sitenavigation.is-tapped > ul a {
     width: 100%;
     margin: 0;
-    background-color: transparent;
+    background-color: #ECECEC;
     display: block;
     font-size: 1.1875em;
     padding-top: 10px;
@@ -226,23 +225,23 @@
     padding-left: 20px;
     padding-right: 20px;
     height: auto;
-    color: #000;
+    color: #758283;
     float: none;
     border: none !important;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
   }
   .navbar .sitenavigation.is-tapped > ul a:hover {
-    background-color: transparent;
+    background-color: #dfdfdf;
   }
   .navbar .sitenavigation.is-tapped > ul li {
     width: 100%;
-    background-color: transparent;
-    border-bottom: solid 1px #000;
+    background-color: #f7f7f7;
+    border-bottom: solid 1px #b9b9b9;
     -webkit-tap-highlight-color: transparent;
   }
   .navbar .sitenavigation.is-tapped > ul li li {
-    background-color: transparent;
+    background-color: #fff;
   }
   .navbar .sitenavigation.is-tapped > ul ul {
     display: none;
@@ -259,14 +258,14 @@
     margin-top: 0;
   }
   .navbar .sitenavigation.is-tapped > ul ul li {
-    border-bottom: solid 1px #000;
+    border-bottom: solid 1px #f9f9f9;
   }
   .navbar .sitenavigation.is-tapped > ul ul li li a {
-    background-color: transparent;
+    background-color: #f9f9f9;
     padding-left: 30px;
   }
   .navbar .sitenavigation.is-tapped > ul ul a {
-    background-color: transparent;
+    background-color: #dfdfdf;
     font-size: 1em;
     padding-left: 20px;
   }

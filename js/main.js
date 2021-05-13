@@ -124,73 +124,76 @@ jQuery(document).ready(function ($) {
 });
 
 
-// on document ready
-$(document).ready(function() {
+// custom
+(function($) {
 
-    // show/hide the mobile menu based on class added to container
-    $('.menu-icon').click(function() {
-        $(this).parent().toggleClass('is-tapped');
-        $('#hamburger').toggleClass('open');
-    });
+  $.fn.menumaker = function(options) {
+      
+      var cssmenu = $(this), settings = $.extend({
+        format: "dropdown",
+        sticky: false
+      }, options);
 
-    // handle touch device events on drop down, first tap adds class, second navigates
-    $('.touch .sitenavigation li.nav-dropdown > a').on('touchend',
-        function(e) {
-            if ($('.menu-icon').is(':hidden')) {
-                var parent = $(this).parent();
-                $(this).find('.clicked').removeClass('clicked');
-                if (parent.hasClass('clicked')) {
-                    window.location.href = $(this).attr('href');
-                } else {
-                    $(this).addClass('linkclicked');
+      return this.each(function() {
 
-                    // close other open menus at this level
-                    $(this).parent().parent().find('.clicked').removeClass('clicked');
-
-                    parent.addClass('clicked');
-                    e.preventDefault();
-                }
+        $(this).find(".button").on('click', function(){
+          $(this).toggleClass('menu-opened');
+          var mainmenu = $(this).next('ul');
+          if (mainmenu.hasClass('open')) { 
+            mainmenu.slideToggle().removeClass('open');
+          }
+          else {
+            mainmenu.slideToggle().addClass('open');
+            if (settings.format === "dropdown") {
+              mainmenu.find('ul').show();
             }
+          }
         });
 
-    // handle the expansion of mobile menu drop down nesting
-    $('.sitenavigation li.nav-dropdown').click(
-        function(event) {
-            if (event.stopPropagation) {
-                event.stopPropagation();
-            } else {
-                event.cancelBubble = true;
-            }
+        cssmenu.find('li ul').parent().addClass('has-sub');
 
-            if ($('.menu-icon').is(':visible')) {
-                $(this).find('> ul').toggle();
-                $(this).toggleClass('expanded');
+        multiTg = function() {
+          cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+          cssmenu.find('.submenu-button').on('click', function() {
+            $(this).toggleClass('submenu-opened');
+            if ($(this).siblings('ul').hasClass('open')) {
+              $(this).siblings('ul').removeClass('open').slideToggle();
             }
-        }
-    );
+            else {
+              $(this).siblings('ul').addClass('open').slideToggle();
+            }
+          });
+        };
 
-    // prevent links for propagating click/tap events that may trigger hiding/unhiding
-    $('.sitenavigation a.nav-dropdown, .sitenavigation li.nav-dropdown a').click(
-        function(event) {
-            if (event.stopPropagation) {
-                event.stopPropagation();
-            } else {
-                event.cancelBubble = true;
-            }
-        }
-    );
+        if (settings.format === 'multitoggle') multiTg();
+        else cssmenu.addClass('dropdown');
 
-    // javascript fade in and out of dropdown menu
-    $('.no-touch .sitenavigation li').hover(
-        function() {
-            if (!$('.menu-icon').is(':visible')) {
-                $(this).find('> ul').fadeIn(100);
-            }
-        },
-        function() {
-            if (!$('.menu-icon').is(':visible')) {
-                $(this).find('> ul').fadeOut(100);
-            }
-        }
-    );
+        if (settings.sticky === true) cssmenu.css('position', 'fixed');
+
+        resizeFix = function() {
+          if ($( window ).width() > 468) {
+            cssmenu.find('ul').show();
+
+          }
+
+          if ($(window).width() <= 468) {
+            cssmenu.find('ul').hide().removeClass('open');
+
+          }
+        };
+        resizeFix();
+        return $(window).on('resize', resizeFix);
+
+      });
+  };
+})(jQuery);
+
+(function($){
+$(document).ready(function(){
+$("#cssmenu").menumaker({
+   format: "multitoggle"
 });
+
+});
+})(jQuery);
+

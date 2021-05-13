@@ -125,20 +125,15 @@ jQuery(document).ready(function ($) {
 
 
 // custom
-$(document).ready(function(){ 
-	var touch 	= $('#resp-menu');
-	var menu 	= $('.menu');
- 
-	$(touch).on('click', function(e) {
-		e.preventDefault();
-		menu.slideToggle();
-	});
-	
-	$(window).resize(function(){
-		var w = $(window).width();
-		if(w > 767 && menu.is(':hidden')) {
-			menu.removeAttr('style');
-		}
-	});
-	
+$(document).ready(function() {
+  $('.toggler-main-navbar').click(function(e) {
+    e.preventDefault();
+    if($(this).hasClass('active')){
+      $(this).removeClass('active');
+      $('#main-navbar').hide();
+    }else{
+      $(this).addClass('active');
+      $('#main-navbar').show();
+    }  
+  });    
 });

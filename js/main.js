@@ -125,15 +125,9 @@ jQuery(document).ready(function ($) {
 
 
 // custom
-$(document).ready(function() {
-  $('.toggler-main-navbar').click(function(e) {
-    e.preventDefault();
-    if($(this).hasClass('active')){
-      $(this).removeClass('active');
-      $('#main-navbar').hide();
-    }else{
-      $(this).addClass('active');
-      $('#main-navbar').show();
-    }  
-  });    
+	$('#header').prepend('<div id="menu-icon"><span class="first"></span><span class="second"></span><span class="third"></span></div>');
+	
+	$("#menu-icon").on("click", function(){
+    $("nav").slideToggle();
+    $(this).toggleClass("active");
 });

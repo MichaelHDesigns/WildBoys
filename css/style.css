@@ -426,8 +426,8 @@ body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  color: #37302a;
-  background: #fff;
+  color: #fff;
+  background: #000;
   font: normal 120%/1.5 sans-serif;
 }
 
@@ -559,8 +559,8 @@ p {
 }
 
 .nav-collapse a {
-  background: #212428;
-  border-bottom: 1px solid rgba(255, 255, 255, .15);
+  background: transparent;
+  border-bottom: transparent;
   color: #fff;
   float: left;
   padding: 0.9em 1.1em;
@@ -588,7 +588,7 @@ p {
 --------------------------------------------- */
 
 .nav-toggle {
-  border: 1px solid #fff;
+  border: transparent;
   color: #fff;
   font-size: 0.85em;
   font-weight: bold;
@@ -607,14 +607,14 @@ p {
   padding: 0 0.75em;
   margin-top: 7px;
   margin-right: 5%;
-  background: #212428;
+  background: transparent;
 }
 
 .nav-toggle:hover,
 .nav-toggle:focus,
 .nav-toggle:active {
-  background-color: #fff;
-  color: #212428;
+  background-color: transparent;
+  color: #fff;
 }
 
 
@@ -624,7 +624,7 @@ p {
 
 .nav-collapse a:hover,
 .nav-collapse li.focus > a {
-  background-color: #3e4853;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 39.999em) {
@@ -656,7 +656,7 @@ p {
     position: relative;
   }
   .js .nav-collapse .dropdown-toggle {
-    border: 1px solid #fff;
+    border: 1px solid transparent;
     color: #fff;
     content: "";
     height: 46px;
@@ -671,8 +671,8 @@ p {
   .js .nav-collapse .dropdown-toggle:hover,
   .js .nav-collapse .dropdown-toggle:focus,
   .js .nav-collapse .dropdown-toggle:active {
-    background-color: #fff;
-    color: #212428;
+    background-color: transparent;
+    color: #fff;
   }
   .js .nav-collapse .dropdown-toggle:after {
     content: "+";
@@ -684,12 +684,12 @@ p {
 }
 
 .dropdown ul a {
-  background: #282e34;
+  background: transparent;
   padding-left: 1.5em;
 }
 
 .dropdown ul ul a {
-  background: #2d353e;
+  background: transparent;
   padding-left: 2.5em;
 }
 
@@ -801,7 +801,7 @@ p {
 
 .section-header .section-title {
   font-size: 32px;
-  color: #111;
+  color: #fff;
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
@@ -811,12 +811,12 @@ p {
 .section-header .section-description {
   text-align: center;
   padding-bottom: 40px;
-  color: #999;
+  color: #fff;
 }
 
 
 #portfolio {
-  background: #ffffff;
+  background: #000;
   padding: 80px 0;
 }
 
@@ -838,17 +838,17 @@ p {
   padding: 10px 22px;
   font-size: 12px;
   line-height: 20px;
-  color: #666666;
+  color: #fff;
   border-radius: 4px;
   text-transform: uppercase;
-  background: #fff;
+  background: #000;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
 
 #portfolio #portfolio-flters li:hover,
 #portfolio #portfolio-flters li.filter-active {
-  background: #050505;
+  background: #000;
   color: #fff;
 }
 
@@ -875,7 +875,8 @@ p {
 
 #portfolio .portfolio-item .details {
   height: 50px;
-  background: #080808;
+  background: #000;
+  color: #fff;
   position: absolute;
   width: 100%;
   height: 50px;
@@ -912,7 +913,7 @@ p {
 }
 
 #contact .info {
-  color: #333333;
+  color: #000;
 }
 
 #contact .info i {
@@ -939,7 +940,7 @@ p {
 #contact .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #333;
+  background: #000;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -994,7 +995,7 @@ p {
 
 }
 #footer {
-  background: #0a0a0a;
+  background: #000;
   padding: 30px 0;
   color: #fff;
   font-size: 14px;
@@ -1008,7 +1009,7 @@ p {
   padding-top: 10px;
   text-align: center;
   font-size: 13px;
-  color: #ccc;
+  color: #fff;
 }
 
 @media (min-width: 769px) {
